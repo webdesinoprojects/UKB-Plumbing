@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ukbplumbing.co.uk/sitemap.xml
+
+# Disallow admin areas if any
+Disallow: /admin/
+Disallow: /api/

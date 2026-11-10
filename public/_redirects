@@ -1,0 +1,24 @@
+# Redirect www to non-www
+https://www.ukbplumbing.co.uk/* https://ukbplumbing.co.uk/:splat 301!
+
+# Canonical service routes
+/services/emergency-call-out /services/emergency-plumber 301
+/services/emergency-plumbing-repairs /services/emergency-plumber 301
+/services/blocked-drain-cleaning /services/blocked-drains 301
+/services/water-leak-repairs /services/water-leakage-and-repair 301
+/services/boiler-installation-repair /services/boiler-installation 301
+/servicesList /services 301
+
+# Canonical quote route
+/booking /inquiry-form 301
+/inquiry-form/Enquiry-Form /inquiry-form 301
+/inquiry-form/enquiry-form /inquiry-form 301
+/location-page /inquiry-form 301
+
+# Canonical location hubs
+/areas-we-cover/southampton /areas-we-cover 301
+/areas-we-cover/southampton/eastleigh /areas-we-cover/eastleigh 301
+/areas-we-cover/eastleigh/eastleigh /areas-we-cover/eastleigh 301
+/areas-we-cover/southampton/chandlers-ford /areas-we-cover/eastleigh/chandlers-ford 301
+/areas-we-cover/new%20forest /areas-we-cover/new-forest 301
+/areas-we-cover/winchester/highcliffe /areas-we-cover/winchester 301
