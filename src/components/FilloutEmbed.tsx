@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import {
+  allowExternalServices,
   COOKIE_CONSENT_EVENT,
-  COOKIE_SETTINGS_EVENT,
   readCookieConsent,
 } from "@/lib/cookieConsent";
 
@@ -44,8 +44,6 @@ export default function FilloutEmbed({ className = "min-h-[520px]" }: FilloutEmb
     }
   }, [allowed, inView]);
 
-  const openCookieSettings = () => window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT));
-
   return (
     <div ref={embedRef} className={className}>
       {!allowed ? (
@@ -54,8 +52,8 @@ export default function FilloutEmbed({ className = "min-h-[520px]" }: FilloutEmb
           <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-700">
             The form is supplied by Fillout and loads only when External services are allowed. You can also call 07359 605766 or email info@ukbplumbing.co.uk.
           </p>
-          <button type="button" onClick={openCookieSettings} className="mt-5 rounded-lg bg-[#1D3B8A] px-5 py-3 font-bold text-white">
-            Manage cookie choices
+          <button type="button" onClick={allowExternalServices} className="mt-5 rounded-lg bg-[#1D3B8A] px-5 py-3 font-bold text-white">
+            Allow enquiry form
           </button>
         </div>
       ) : inView ? (

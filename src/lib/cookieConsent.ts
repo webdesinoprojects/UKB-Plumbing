@@ -43,3 +43,13 @@ export function saveCookieConsent(
   window.dispatchEvent(new CustomEvent(COOKIE_CONSENT_EVENT, { detail: value }));
   return value;
 }
+
+export function allowExternalServices(): CookieConsentPreferences {
+  const current = readCookieConsent();
+
+  return saveCookieConsent({
+    analytics: current?.analytics ?? false,
+    advertising: current?.advertising ?? false,
+    externalMedia: true,
+  });
+}

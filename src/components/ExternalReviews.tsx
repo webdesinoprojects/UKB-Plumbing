@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Script from "next/script";
-import { COOKIE_CONSENT_EVENT, COOKIE_SETTINGS_EVENT, readCookieConsent } from "@/lib/cookieConsent";
+import { allowExternalServices, COOKIE_CONSENT_EVENT, readCookieConsent } from "@/lib/cookieConsent";
 
 export default function ExternalReviews() {
   const [allowed, setAllowed] = useState(false);
@@ -22,10 +22,10 @@ export default function ExternalReviews() {
         </p>
         <button
           type="button"
-          onClick={() => window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT))}
+          onClick={allowExternalServices}
           className="mt-4 rounded-lg bg-[#1D3B8A] px-5 py-3 text-sm font-bold text-white hover:bg-blue-900"
         >
-          Review cookie choices
+          Allow live reviews
         </button>
       </div>
     );
