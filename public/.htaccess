@@ -1,0 +1,40 @@
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Canonical host.
+RewriteCond %{HTTP_HOST} ^www\.ukbplumbing\.co\.uk$ [NC]
+RewriteRule ^ https://ukbplumbing.co.uk%{REQUEST_URI} [R=301,L,NE]
+
+# Canonical service routes.
+RewriteRule ^services/emergency-call-out/?$ /services/emergency-plumber [R=301,L,NE]
+RewriteRule ^services/emergency-plumbing-repairs/?$ /services/emergency-plumber [R=301,L,NE]
+RewriteRule ^services/blocked-drain-cleaning/?$ /services/blocked-drains [R=301,L,NE]
+RewriteRule ^services/water-leak-repairs/?$ /services/water-leakage-and-repair [R=301,L,NE]
+RewriteRule ^services/boiler-installation-repair/?$ /services/boiler-installation [R=301,L,NE]
+RewriteRule ^servicesList/?$ /services [R=301,L,NE]
+
+# Canonical quote route.
+RewriteRule ^booking/?$ /inquiry-form [R=301,L,NE]
+RewriteRule ^inquiry-form/enquiry-form/?$ /inquiry-form [R=301,L,NE,NC]
+RewriteRule ^location-page/?$ /inquiry-form [R=301,L,NE]
+
+# Canonical location hubs.
+RewriteRule ^areas-we-cover/southampton/?$ /areas-we-cover [R=301,L,NE]
+RewriteRule ^areas-we-cover/southampton/eastleigh/?$ /areas-we-cover/eastleigh [R=301,L,NE]
+RewriteRule ^areas-we-cover/eastleigh/eastleigh/?$ /areas-we-cover/eastleigh [R=301,L,NE]
+RewriteRule ^areas-we-cover/southampton/chandlers-ford/?$ /areas-we-cover/eastleigh/chandlers-ford [R=301,L,NE]
+RewriteRule ^areas-we-cover/new\x20forest/?$ /areas-we-cover/new-forest [R=301,L,NE]
+RewriteRule ^areas-we-cover/winchester/highcliffe/?$ /areas-we-cover/winchester [R=301,L,NE]
+
+# Canonical extensionless static-export routes.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L,NE]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
