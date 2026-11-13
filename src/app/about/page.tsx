@@ -75,7 +75,6 @@ export default function AboutPage() {
           <section className="mt-12 space-y-4">
             <h2 className="text-3xl font-bold text-ukb-darkblue">Company details</h2>
             <p className="text-slate-700">UKB Plumbing Ltd · Company number 16028683 · VAT 519845848</p>
-            <p className="text-slate-700">11 Fuchsia Gardens, Southampton, Hampshire, SO16 6TY</p>
             <p className="text-slate-700"><a className="underline" href="tel:+447359605766">07359 605766</a> · <a className="underline" href="mailto:info@ukbplumbing.co.uk">info@ukbplumbing.co.uk</a></p>
           </section>
 

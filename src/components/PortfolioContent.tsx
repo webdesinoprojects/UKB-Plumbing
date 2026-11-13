@@ -337,7 +337,7 @@ const PortfolioContent = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm text-ukb-darkgray">Emergency Call</p>
-                                        <a href="tel:07359605766" className="font-bold text-ukb-blue">07359605766</a>
+                                        <a href="tel:+447359605766" className="font-bold text-ukb-blue">07359605766</a>
                                     </div>
                                 </div>
                             </div>

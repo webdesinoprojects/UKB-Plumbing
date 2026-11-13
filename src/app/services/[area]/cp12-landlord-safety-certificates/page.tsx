@@ -147,7 +147,7 @@ export default async function CP12LandlordSafetyCertificatesPage(props: PageProp
                 </div>
 
                 <a
-                  href="tel:07359605766"
+                  href="tel:+447359605766"
                   className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm px-6 py-3.5 rounded-xl transition whitespace-nowrap shadow-sm"
                 >
                   Book Priority CP12 Check
@@ -315,7 +315,7 @@ export default async function CP12LandlordSafetyCertificatesPage(props: PageProp
                
                                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                                  <a
-                                   href="tel:07359605766"
+                                   href="tel:+447359605766"
                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#003B7A] hover:bg-[#002B5B] text-white px-6 py-3.5 text-sm sm:text-base font-bold shadow-md transition-colors text-center"
                                  >
                                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />

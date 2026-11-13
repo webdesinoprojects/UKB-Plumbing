@@ -399,7 +399,7 @@ const Header = () => {
               </Link>
 
               <a
-                href="tel:07359605766"
+                href="tel:+447359605766"
                 data-tracking-location="desktop_header"
                 className="flex items-center gap-2 font-medium bg-ukb-blue text-white py-2 px-4 rounded-md hover:bg-ukb-darkblue transition-all duration-200 shadow-sm text-[16px] tracking-wide"
               >
@@ -411,7 +411,7 @@ const Header = () => {
 
           <div className="flex items-center gap-2 lg:hidden">
             <a
-              href="tel:07359605766"
+              href="tel:+447359605766"
               data-tracking-location="mobile_header"
               className="flex items-center gap-1 text-[14px] font-medium bg-ukb-blue text-white py-1.5 px-2.5 sm:py-2 sm:px-3 rounded-md hover:bg-ukb-darkblue transition-colors"
             >
@@ -645,7 +645,7 @@ const Header = () => {
           </Link>
 
           <a
-            href="tel:07359605766"
+            href="tel:+447359605766"
             data-tracking-location="mobile_menu"
             className="flex items-center justify-start gap-2 font-medium border border-ukb-blue text-ukb-blue py-2 px-3 rounded-lg !text-left text-[14px] hover:bg-ukb-blue hover:text-white transition-colors w-full"
             onClick={() => setIsMenuOpen(false)}

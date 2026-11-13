@@ -40,7 +40,7 @@ const ServicesHero = ({ title, description, image }: ServicesHeroProps) => {
               Book This Service
             </Link>
             <a
-              href="tel:07359605766"
+              href="tel:+447359605766"
               className={cn(
                 "bg-white text-ukb-blue py-3 px-6 rounded-md border border-ukb-blue",
                 "hover:bg-ukb-lightblue transition-colors duration-300"

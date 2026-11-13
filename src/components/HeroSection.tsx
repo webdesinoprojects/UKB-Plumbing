@@ -3,6 +3,7 @@
 import { Phone, Clock, Check } from "lucide-react";
 import Link from "next/link";
 import QuotePromptCard from "@/components/QuotePromptCard";
+import { businessFacts } from "@/config/businessFacts";
 
 const HeroSection = () => {
   return (
@@ -46,9 +47,7 @@ const HeroSection = () => {
 
               {/* Main Heading */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Emergency Plumber &amp; Heating Support
-                <br />
-                in Southampton
+                Emergency Plumber &amp; Boiler Repair in Southampton
               </h1>
 
               {/* Description */}
@@ -130,7 +129,7 @@ const HeroSection = () => {
               <div className="mt-6 inline-flex items-center gap-3 border-2 border-yellow-400/60 rounded-full px-6 py-3 bg-[#0a3b7c]/40 backdrop-blur-sm">
                 <Clock className="w-5 h-5 text-yellow-400" strokeWidth={2.5} aria-hidden="true" />
                 <span className="text-sm font-bold text-yellow-400 tracking-wide uppercase">
-                  Arrival estimate confirmed when you call
+                  {businessFacts.emergencyResponseWording}
                 </span>
               </div>
             </div>

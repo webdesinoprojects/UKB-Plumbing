@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
 
@@ -55,7 +55,6 @@ export default function Footer() {
             <div className="mt-6 space-y-3 text-sm">
               <a href="tel:+447359605766" data-tracking-location="footer" className="flex items-center gap-2 text-white/80 hover:text-white"><Phone size={16} />07359 605766</a>
               <a href="mailto:info@ukbplumbing.co.uk" className="flex items-center gap-2 text-white/80 hover:text-white"><Mail size={16} />info@ukbplumbing.co.uk</a>
-              <div className="flex items-start gap-2 text-white/80"><MapPin size={16} className="mt-0.5 shrink-0" /><address className="not-italic">11 Fuchsia Gardens, Southampton, Hampshire, SO16 6TY</address></div>
             </div>
           </div>
 

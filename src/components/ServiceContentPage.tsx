@@ -15,10 +15,11 @@ interface ServiceContentPageProps {
   sections: Section[];
   faqs: Faq[];
   related: { label: string; href: string }[];
+  areaLinks?: { label: string; href: string }[];
   guidanceLink?: { label: string; href: string };
 }
 
-export default function ServiceContentPage({ title, description, path, sections, faqs, related, guidanceLink }: ServiceContentPageProps) {
+export default function ServiceContentPage({ title, description, path, sections, faqs, related, areaLinks, guidanceLink }: ServiceContentPageProps) {
   const serviceAreaSlug = ({
     "/services/emergency-plumber": "247-emergency-plumber",
     "/services/boiler-repair": "boiler-repair-and-breakdown",
@@ -68,6 +69,20 @@ export default function ServiceContentPage({ title, description, path, sections,
             <h2 className="text-2xl font-bold text-ukb-darkblue">Related services</h2>
             <div className="flex flex-wrap gap-3">{related.map((item) => <Link key={item.href} href={item.href} className="rounded-lg border border-slate-300 px-4 py-2 font-semibold text-ukb-blue hover:bg-slate-50">{item.label}</Link>)}</div>
           </section>
+
+          {areaLinks && areaLinks.length > 0 && (
+            <section className="space-y-4" aria-labelledby="service-area-links">
+              <h2 id="service-area-links" className="text-2xl font-bold text-ukb-darkblue">Boiler repair areas</h2>
+              <p className="text-slate-700">Find local plumbing and heating information for the areas we cover.</p>
+              <div className="flex flex-wrap gap-3">
+                {areaLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="rounded-lg border border-slate-300 px-4 py-2 font-semibold text-ukb-blue hover:bg-slate-50">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
           {priorityAreaLinks.length > 0 && (
             <section className="space-y-4">

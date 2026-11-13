@@ -55,7 +55,7 @@ const AnnouncementBar = () => {
             <div className="marquee-container">
               <div className="marquee-content flex items-center justify-center text-xl">
                 <a 
-                  href="tel:07359605766" 
+                  href="tel:+447359605766"
                   className={cn("transition-colors", isLight ? "hover:text-ukb-blue" : "hover:text-ukb-lightblue")}
                 >
                   {announcements[currentAnnouncement]}

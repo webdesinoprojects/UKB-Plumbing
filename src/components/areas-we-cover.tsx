@@ -11,7 +11,7 @@ interface CityLink {
 }
 
 const cityLinks: CityLink[] = [
-  { name: "Southampton", href: "/areas-we-cover", slug: "southampton", status: "HEAD OFFICE", highlighted: true },
+  { name: "Southampton", href: "/areas-we-cover", slug: "southampton", status: "MAIN SERVICE AREA", highlighted: true },
   { name: "Eastleigh", href: "/areas-we-cover/eastleigh", slug: "eastleigh", status: "VIEW COVERAGE", highlighted: false },
   { name: "New Forest", href: "/areas-we-cover/new-forest", slug: "new-forest", status: "VIEW COVERAGE", highlighted: false },
   { name: "Salisbury", href: "/areas-we-cover/salisbury", slug: "salisbury", status: "VIEW COVERAGE", highlighted: false },
@@ -35,12 +35,12 @@ export default function AreasWeCover() {
             </h2>
 
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Browse the current Southampton, Eastleigh, New Forest, Salisbury and Winchester coverage pages. An arrival estimate is confirmed when you call and depends on availability, traffic and location.
+              Browse the current Southampton, Eastleigh, New Forest, Salisbury and Winchester coverage pages. Emergency response is typically 30–60 minutes, subject to engineer availability, traffic and location.
             </p>
           </div>
 
           <a
-            href="tel:07359605766"
+            href="tel:+447359605766"
             className="inline-flex items-center justify-center gap-2 bg-[#0A3266] hover:bg-[#07244a] text-white font-medium text-xs sm:text-sm px-5 py-2.5 rounded-md transition-colors duration-200 shadow-sm shrink-0 w-full sm:w-auto"
           >
             <Phone className="w-3.5 h-3.5 fill-current" />

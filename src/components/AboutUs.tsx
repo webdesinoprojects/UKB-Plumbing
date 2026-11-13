@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Clock, ShieldCheck, Wrench } from "lucide-react";
+import { businessFacts } from "@/config/businessFacts";
 
 const features = [
-  { title: "Availability confirmed", text: "An arrival estimate is provided when you call.", icon: Clock },
+  { title: "Emergency response", text: businessFacts.emergencyResponseWording, icon: Clock },
   { title: "Appropriate engineer", text: "The work is matched to the qualifications required.", icon: ShieldCheck },
   { title: "Scope agreed first", text: "Proposed work, charges and job-specific terms are explained.", icon: Wrench },
 ] as const;

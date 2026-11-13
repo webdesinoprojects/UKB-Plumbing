@@ -273,7 +273,7 @@ function ServicesPageContent() {
 
                     <div className="w-full lg:w-auto bg-slate-900/90 border border-slate-700 rounded-2xl p-4 flex flex-col items-center justify-center text-center shadow-inner z-10 flex-shrink-0 lg:min-w-[220px]">
                       <a
-                        href="tel:07359605766"
+                        href="tel:+447359605766"
                         className="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base px-4 py-2.5 rounded-xl transition shadow-md whitespace-nowrap flex items-center justify-center gap-2 mb-2"
                       >
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

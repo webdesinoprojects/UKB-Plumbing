@@ -14,7 +14,8 @@ import { getAllAreaSlugs, slugify } from "@/data/allAreasData";
 import AreasHeroSection from "@/components/AreasHeroSection";
 import ConsentIframe from "@/components/ConsentIframe";
 
-const CONTACT_NUMBER = "07359605766";
+const CONTACT_NUMBER = "+447359605766";
+const CONTACT_NUMBER_DISPLAY = "07359 605766";
 const GET_QUOTE_URL = "/inquiry-form";
 
 function formatServiceLabel(serviceName: string) {
@@ -393,7 +394,7 @@ export default function AreaDetailPage({ area, city }: AreaDetailPageProps) {
                   href={`tel:${CONTACT_NUMBER}`}
                   className="font-semibold text-ukb-darkblue underline underline-offset-2"
                 >
-                  {CONTACT_NUMBER}
+                  {CONTACT_NUMBER_DISPLAY}
                 </a>{" "}
                 and we&apos;ll confirm availability and an estimated arrival time.
               </div>
@@ -404,7 +405,7 @@ export default function AreaDetailPage({ area, city }: AreaDetailPageProps) {
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-ukb-darkblue text-white px-4 py-2.5 text-xs sm:px-5 sm:py-3 sm:text-sm sm:rounded-xl hover:bg-ukb-darkblue/90 transition-colors w-full sm:w-auto text-center"
                 >
                   <Phone className="w-4 h-4" />
-                  <span className="font-semibold">Call {CONTACT_NUMBER}</span>
+                  <span className="font-semibold">Call {CONTACT_NUMBER_DISPLAY}</span>
                 </a>
 
                 <GetQuoteButton label="Request a Quote" />

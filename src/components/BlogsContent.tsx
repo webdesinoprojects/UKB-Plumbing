@@ -7,6 +7,7 @@ import QuotePromptCard from "@/components/QuotePromptCard";
 
 import Footer from "@/components/Footer";
 import ReviewLinksBadge from "@/components/ReviewLinksBadge";
+import { blogArticles } from "@/data/blogArticles";
 
 export default function BlogsContent() {
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function BlogsContent() {
       {/* Top Bar */}
       {/* Header */}
       {/* Hero Section with main page design */}
-      <section className="relative min-h-[740px] flex items-center overflow-hidden bg-[#0a3b7c] hero-section-main md:pt-[100px]">
+      <section className="relative min-h-[640px] flex items-center overflow-hidden bg-[#0a3b7c] hero-section-main md:pt-[100px]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -117,6 +118,12 @@ export default function BlogsContent() {
                 >
   Request a Quote
 </Link>
+                <a
+                  href="#latest-articles"
+                  className="border border-white/70 text-white px-6 py-3 rounded-lg flex items-center justify-center hover:bg-white/10 transition font-semibold"
+                >
+                  View latest articles
+                </a>
               </div>
             </div>
 
@@ -148,7 +155,7 @@ export default function BlogsContent() {
       </section>
 
       {/* Blog Section */}
-     <section className="py-8 md:py-16 bg-[#f7f4ef]">
+     <section id="latest-articles" className="scroll-mt-28 py-8 md:py-16 bg-[#f7f4ef]">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-8">
       <h2 className="text-2xl sm:text-3xl font-bold text-ukb-darkblue">
@@ -161,21 +168,14 @@ export default function BlogsContent() {
 
     {/* Featured Articles Section */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h3 className="text-lg font-bold text-ukb-darkblue mb-2">Hard Water Solutions for Hampshire Homes</h3>
-        <p className="text-sm text-ukb-darkgray mb-4">Learn how to protect your boiler and heating system from limescale buildup with magnetic filters and water softeners.</p>
-        <Link href="/blogs/hard-water-hampshire-homes" className="text-ukb-blue font-semibold text-sm hover:underline">Read More →</Link>
-      </div>
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h3 className="text-lg font-bold text-ukb-darkblue mb-2">Emergency Boiler Breakdown Guide</h3>
-        <p className="text-sm text-ukb-darkgray mb-4">Step-by-step troubleshooting for common boiler issues and when to call a professional Gas Safe engineer.</p>
-        <Link href="/blogs/emergency-boiler-breakdown-guide" className="text-ukb-blue font-semibold text-sm hover:underline">Read More →</Link>
-      </div>
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h3 className="text-lg font-bold text-ukb-darkblue mb-2">Preventing Blocked Drains in Autumn</h3>
-        <p className="text-sm text-ukb-darkgray mb-4">Seasonal maintenance tips to keep your drainage system flowing freely during fall leaf drop and increased rainfall.</p>
-        <Link href="/blogs/preventing-blocked-drains-autumn" className="text-ukb-blue font-semibold text-sm hover:underline">Read More →</Link>
-      </div>
+      {blogArticles.map((article) => (
+        <article key={article.slug} className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-xs font-semibold uppercase tracking-wide text-ukb-blue">{article.readTime}</p>
+          <h3 className="mt-2 text-lg font-bold text-ukb-darkblue mb-2">{article.title}</h3>
+          <p className="text-sm text-ukb-darkgray mb-4">{article.description}</p>
+          <Link href={`/blogs/${article.slug}`} className="text-ukb-blue font-semibold text-sm hover:underline">Read More →</Link>
+        </article>
+      ))}
     </div>
 
   </div>
